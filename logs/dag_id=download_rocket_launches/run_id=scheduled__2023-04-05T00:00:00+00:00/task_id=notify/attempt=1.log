@@ -1,0 +1,28 @@
+[2023-04-19T09:03:26.613+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: download_rocket_launches.notify scheduled__2023-04-05T00:00:00+00:00 [queued]>
+[2023-04-19T09:03:26.707+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: download_rocket_launches.notify scheduled__2023-04-05T00:00:00+00:00 [queued]>
+[2023-04-19T09:03:26.707+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-19T09:03:26.707+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2023-04-19T09:03:26.707+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-19T09:03:28.327+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): notify> on 2023-04-05 00:00:00+00:00
+[2023-04-19T09:03:28.416+0000] {standard_task_runner.py:55} INFO - Started process 5799 to run task
+[2023-04-19T09:03:28.420+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'download_rocket_launches', 'notify', 'scheduled__2023-04-05T00:00:00+00:00', '--job-id', '59', '--raw', '--subdir', 'DAGS_FOLDER/my_first_dag.py', '--cfg-path', '/tmp/tmpiij42y_h']
+[2023-04-19T09:03:28.421+0000] {standard_task_runner.py:83} INFO - Job 59: Subtask notify
+[2023-04-19T09:03:29.313+0000] {task_command.py:388} INFO - Running <TaskInstance: download_rocket_launches.notify scheduled__2023-04-05T00:00:00+00:00 [running]> on host 30d485bbd18e
+[2023-04-19T09:03:29.918+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=download_rocket_launches
+AIRFLOW_CTX_TASK_ID=notify
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-05T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-05T00:00:00+00:00
+[2023-04-19T09:03:29.919+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-04-19T09:03:29.923+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'echo "There are now $(ls /tmp/images/ | wc -l) images."']
+[2023-04-19T09:03:30.034+0000] {subprocess.py:86} INFO - Output:
+[2023-04-19T09:03:30.211+0000] {subprocess.py:93} INFO - There are now 10 images.
+[2023-04-19T09:03:30.211+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-04-19T09:03:30.723+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=download_rocket_launches, task_id=notify, execution_date=20230405T000000, start_date=20230419T090326, end_date=20230419T090330
+[2023-04-19T09:03:31.010+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-04-19T09:03:32.314+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,30 @@
+[2023-04-19T08:13:14.106+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: producer_aware.generate_dataset scheduled__2023-04-18T15:40:22.570962+00:00 [queued]>
+[2023-04-19T08:13:14.125+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: producer_aware.generate_dataset scheduled__2023-04-18T15:40:22.570962+00:00 [queued]>
+[2023-04-19T08:13:14.125+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-19T08:13:14.125+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2023-04-19T08:13:14.126+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-19T08:13:14.147+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): generate_dataset> on 2023-04-18 15:40:22.570962+00:00
+[2023-04-19T08:13:14.157+0000] {standard_task_runner.py:55} INFO - Started process 109 to run task
+[2023-04-19T08:13:14.213+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'producer_aware', 'generate_dataset', 'scheduled__2023-04-18T15:40:22.570962+00:00', '--job-id', '24', '--raw', '--subdir', 'DAGS_FOLDER/my_first_dag.py', '--cfg-path', '/tmp/tmp_zujdmhg']
+[2023-04-19T08:13:14.214+0000] {standard_task_runner.py:83} INFO - Job 24: Subtask generate_dataset
+[2023-04-19T08:13:14.423+0000] {task_command.py:388} INFO - Running <TaskInstance: producer_aware.generate_dataset scheduled__2023-04-18T15:40:22.570962+00:00 [running]> on host 30d485bbd18e
+[2023-04-19T08:13:14.656+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=producer_aware
+AIRFLOW_CTX_TASK_ID=generate_dataset
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-18T15:40:22.570962+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-18T15:40:22.570962+00:00
+[2023-04-19T08:13:14.678+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-04-19T08:13:14.715+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'echo "data1,data2,data3\n" >> /tmp/data.csv']
+[2023-04-19T08:13:14.749+0000] {subprocess.py:86} INFO - Output:
+[2023-04-19T08:13:14.754+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-04-19T08:13:14.837+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/models/baseoperator.py:1376: RemovedInAirflow3Warning: Passing 'execution_date' to 'TaskInstance.xcom_push()' is deprecated.
+  context["ti"].xcom_push(key=key, value=value, execution_date=execution_date)
+
+[2023-04-19T08:13:14.866+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=producer_aware, task_id=generate_dataset, execution_date=20230418T154022, start_date=20230419T081314, end_date=20230419T081314
+[2023-04-19T08:13:14.925+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-04-19T08:13:14.958+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check
